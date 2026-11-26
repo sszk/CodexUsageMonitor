@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 — 2026-11-27
+
+- Exclude generated VSIX packages from version control.
+
 ## 0.1.2 — 2026-11-27
 
 - Add a local Git commit to the workflow after each change passes verification and the VSIX build.
