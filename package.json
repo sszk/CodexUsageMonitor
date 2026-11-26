@@ -1,0 +1,111 @@
+{
+  "name": "codex-usage-monitor",
+  "displayName": "Codex Usage Monitor",
+  "publisher": "local-tools",
+  "description": "%description%",
+  "version": "0.1.2",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codexUsageMonitor.refresh",
+        "title": "%refresh%",
+        "category": "Codex Usage Monitor"
+      },
+      {
+        "command": "codexUsageMonitor.openDashboard",
+        "title": "%openDashboard%",
+        "category": "Codex Usage Monitor"
+      },
+      {
+        "command": "codexUsageMonitor.showDiagnostics",
+        "title": "%showDiagnostics%",
+        "category": "Codex Usage Monitor"
+      }
+    ],
+    "icons": {
+      "codex-usage-logo": {
+        "description": "%icon%",
+        "default": "dashboard"
+      }
+    },
+    "configuration": {
+      "title": "Codex Usage Monitor",
+      "properties": {
+        "codexUsageMonitor.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "%enabled%",
+          "scope": "window"
+        },
+        "codexUsageMonitor.refreshInterval": {
+          "type": "integer",
+          "default": 300,
+          "description": "%refreshInterval%",
+          "scope": "window",
+          "minimum": 60,
+          "maximum": 2147483
+        },
+        "codexUsageMonitor.codexPath": {
+          "type": "string",
+          "default": "",
+          "description": "%codexPath%",
+          "scope": "machine"
+        },
+        "codexUsageMonitor.warningEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "%warningEnabled%",
+          "scope": "window"
+        },
+        "codexUsageMonitor.warningThreshold": {
+          "type": "integer",
+          "default": 20,
+          "description": "%warningThreshold%",
+          "scope": "window",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "codexUsageMonitor.criticalThreshold": {
+          "type": "integer",
+          "default": 5,
+          "description": "%criticalThreshold%",
+          "scope": "window",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "check": "tsc --noEmit --noUnusedLocals --noUnusedParameters",
+    "test": "npm run build && node --test test/*.test.cjs",
+    "package": "vsce package --no-dependencies --allow-missing-repository --skip-license --no-rewrite-relative-links",
+    "vscode:prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/vscode": "1.90.0",
+    "@vscode/vsce": "^3.6.0",
+    "typescript": "~5.9.3"
+  }
+}

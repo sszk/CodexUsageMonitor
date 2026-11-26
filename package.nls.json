@@ -1,0 +1,13 @@
+{
+  "enabled": "Show usage and enable refreshes.",
+  "refreshInterval": "Automatic refresh interval in seconds.",
+  "codexPath": "Absolute path to the local Codex executable.",
+  "warningEnabled": "Highlight low remaining usage.",
+  "warningThreshold": "Warn at or below this remaining percentage.",
+  "criticalThreshold": "Show an error at or below this percentage, capped at the warning threshold.",
+  "refresh": "Refresh",
+  "openDashboard": "Open Usage Dashboard",
+  "showDiagnostics": "Show Diagnostics",
+  "description": "Monitor remaining Codex usage in the status bar.",
+  "icon": "Codex usage dashboard"
+}

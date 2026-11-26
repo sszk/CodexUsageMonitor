@@ -1,0 +1,13 @@
+{
+  "enabled": "利用枠を表示し、更新を有効にします。",
+  "refreshInterval": "自動更新の間隔（秒）。",
+  "codexPath": "ローカルの Codex 実行ファイルの絶対パス。",
+  "warningEnabled": "残量が少ない場合に強調表示します。",
+  "warningThreshold": "警告を表示する残量の上限（%）。",
+  "criticalThreshold": "エラーを表示する残量の上限（%）。警告しきい値を上限とします。",
+  "refresh": "更新",
+  "openDashboard": "利用状況ダッシュボードを開く",
+  "showDiagnostics": "診断情報を表示",
+  "description": "Codex の利用枠の残量をステータスバーに表示します。",
+  "icon": "Codex 利用状況"
+}
